@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Profile Page</title>
+        <link rel = "shortcut icon" type="image/x-icon" href="/Milestone 1/img/page_icon.png">
+        <link rel="stylesheet" href="responsive_profile.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+        <body>
+            <h1>Welcome To My Page!</h1>
+            <div>
+            <nav>
+                <p><a href="#Education">Education</a> </p>
+                <p><a href="#Experience">Experience</a> </p>
+                <p><a href="#Programming_Skills">Programming Skills</a></p>
+                <p><a href="#General Interests">General Interests</a></p>
+                <p><a href="#Projects">My Projects In This Course</a></p>
+
+            </nav>
+            <div>
+            
+            <h3>About Me</h3>
+            <img src = "img/miracle_headshot.png" width="5%" class="headshot">
+
+            <p class="bio">My name is Miracle Sanchez, and I am a senior computer science major at St. John's University. I grew up playing softball and basketball in my spare time. Now, as an avid Yankees fan, I closely follow the league, eagerly anticipating plays that seem almost impossible to make and the tense pitcher-batter matchups, which can ultimately determine the final score.
+            <br>
+            <br>
+            I chose computer science because of its versatility. It provides me with the opportunity to merge my tech interests with my passion for sports. With that said, I am hopeful about working within the sports industry, either as a player stats analyst or a software engineer. On this page, you'll discover more about my skills and other interests! 
+            </p>
+            </div>
+            <hr>
+            
+            <div id="Education">
+                <h3>Education</h3>
+               <p>St. John's University</p><iframe src="https://assets.pinterest.com/ext/embed.html?id=291045194645759984" height="5%" width="13%" frameborder="0" scrolling="no" ></iframe>
+               <p>B.S. in Computer Science</p>
+               <p>Expected Graduation Date: May 2024</p>
+            </div>
+            <hr>
+            <div id="Experience">
+                <h3>Experience</h3>
+
+            <ul>
+                <li>
+                    <h4>Broadridge - Summer 2023</h4>
+                    <p>- Implemented new features to outgoing client products using java within AWS lambda</p>
+                    <p>- Worked within a team of developers using Agile methodologies to solve problems or implement new features during each sprint</p>
+                    <p>- Practiced using Git/ GitLab to commit code to main branch for each story or task I worked on</p>
+                </li>
+                <li>
+                    <h4>Personal Projects</h4>
+                    <p><a href="https://github.com/miraclesanchez/Guess-the-Number-Game/tree/master">Guess The Number Game</a></p>
+                </li>
+            </ul>
+
+            </div>
+            <hr>
+            <div id="Programming_Skills" class="box">
+                <h3>Programming Skills</h3>
+                <table>
+                    <tr>
+                        <th> Programming Language </th>
+                        <th> Experience </th>
+                    </tr>
+        
+                    <tr>
+                        <td>Java</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Novice</td>
+                    </tr>
+                        <td>SQL</td>
+                        <td>Intermediate</td>  
+                        
+                </table>
+            </div>
+            <hr>
+            <div id="General Interests">
+                <h3>General Interests</h3>
+
+                <div class="favs">
+
+                    <div class="fav_movie">
+                <p><u>Favorite Movie:</u>
+                <span>Mamma Mia!</span></p>
+                <iframe 
+                src="https://www.youtube.com/embed/1aqLE3WqYpg?si=4CVCm4910rM5pLLi" 
+                title="YouTube video player" 
+                frameborder="0" 
+                loading = "lazy" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+                </iframe>
+                </div>
+
+                <div class="fav_song">
+                <p> <u> Favorite Song:</u> Work Song by Hozier</p>
+                <iframe  
+                src="https://www.youtube.com/embed/uuOdivGPduc?si=0TgbdRQ1O8cAS_MM" 
+                title="YouTube video player" 
+                frameborder="0" 
+                loading = "lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+                <br>
+                <br>
+             </div>
+            
+             <div class="fav_show">
+                <p><u>Favorite TV Show:</u> New Girl</p>
+                <iframe  
+                src="https://www.youtube.com/embed/Y331RYPpCJc?si=0DjO85ohqGfzZgsF" 
+                title="YouTube video player" 
+                frameborder="0" 
+                laoding = "lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+               <br>
+               <br>
+                </div>
+
+            </div>
+            <br>
+            <div id= fav_webs>
+                <p><u>Favorite Websites:</u> </p>
+                 <ul>
+                    <li><a href = "https://www.tiktok.com/explore" target="_blank">TikTok</a>
+                        <p>On this website people can make videos up to 10 minutes long about anything they want and post it. You can find recepies, programming tutorials, and much more.</p>
+                    </li>
+                    <li><a href = "https://www.madewell.com" target="_blank">Madewell</a>
+                    <p>Madewell is a clothing store and this is there website where you can do some online shopping.</p>
+                    </li>
+                    <li><a href = "https://www.youtube.com" target="_blank">Youtube</a>
+                    <p>Youtube is a widely known site where you can find pretty much anything from tutorials to full length movie.</p>
+
+                    <p>Enter your favorite song and click submit to search for it on youtube</p>
+                    <form method = "GET"
+                    action="https://youtube.com/results" target = "_blank">
+                    <label for="song">Song:</label>
+                    <input type="text" id="song" name="search_query" placeholder="Song">
+                    <input type="submit" value="Search">
+                </form>
+                    </li>  
+                </ul>
+                </div>
+                <hr>
+            </div>
+            <div id = "Projects">
+                <h3>My Projects In This Course</h3>
+                <ul>
+                    <li>Deploy a Profile Page</li>
+                    <p>- Used HTML and CSS to create a profile page and then deployed it using Github Pages. <a href="https://miraclesanchez.github.io/CUS1172-FALL2023/" target="_blank">Profile Page</a></p>
+                    
+                    <li>proj 2</li>
+                    <li>proj 3</li>
+                    <li>proj 4</li>
+                    <li>proj 5</li>
+                    <li>proj 6</li>
+                </ul>
+            </div>
+                <hr>
+            <footer>
+                <p>&lt; &lt; &lt;<a href = "#"> Back To Top </a> &gt; &gt; &gt;</p>
+                <br>
+                
+                    <p style="color: aqua;">&copy;Miracle Sanchez</p>
+
+                <style>
+                footer p a:hover{
+                    color: salmon;
+                }
+                </style>
+                
+            </footer>  
+           
+        </body>
+    
+</html>
