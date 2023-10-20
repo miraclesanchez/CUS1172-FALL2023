@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+        
+</head>
+<body>
+    
+    <h1>Task List Creator</h1>
+
+<div class="container">
+    <form id="form">
+        
+        <label>Set Title</label>
+        <input id="task_title" type="text" placeholder="Title">
+<br>
+<br>
+<br>
+    <label>Select Priority</label>
+       <select id="task_priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+       </select>
+
+<br><br><br>
+<div id="task_status">
+        <label>Select Status<input name ='status' type="radio" value="Completed">Completed</label>
+
+        <label><input type="radio" name="status" value="Pending">Pending</label>
+</div>
+<br><br><br>
+        <input type="submit">
+    <br>
+    <br><hr>
+    <ul id="task_list">
+
+    </ul>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+<!-- element = event.target 
+element is the button or the text field and the target is the thing its self. how to we check with element was clicked. use if statements using the id names. so if the button with id (dfj) was picked then thats the one we use
+
+event delegation -- any click can be handled and distinguish which of the child elements was clicked -->
+
+<!-- buttons for altering tasks
+remove
+markasdone
+status update
+edit 
+
+Also -- wait for ALL fields to be filled in before submit button is enabled-->

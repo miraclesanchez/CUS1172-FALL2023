@@ -1,0 +1,19 @@
+body{
+    background-color: midnightblue;
+}
+
+h1{
+    background-color: aliceblue;
+    text-align: center;
+    color: midnightblue;
+}
+
+label,ul,li{
+    color: antiquewhite;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+}
+
