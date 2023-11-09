@@ -1,8 +1,13 @@
 {
-  "questions": [
+  "quiz": [
     {
       "id": "multiple choice",
-      "Question": "What is 2+2?"
+      "Question": ["What is 2+2?", "What is 2+3", ]
+      "Answers": [4,5,23,90]
+    }
+    {
+      "id": "true or false",
+      "Question": "3*3 = 10"
     }
   ],
   "profile": {
