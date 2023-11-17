@@ -1,0 +1,20 @@
+<!-- 
+
+--script snipets go after the body, before the last html tag
+-- you can separate it so have the script templates in a different html file and import it using 
+<link href = "link" rel="import">
+
+--handlebars.js library: we can load the template and it allows us to define the templates using only html and then we can just replace the variables 
+
+in handlebars, index is not accessed using '[i]' but you would just do '.i'
+
+how to know which attribute is using data prefix attributes. allows us to pass arguments to the element
+
+event delegation -- idea that i listen for events on a parent element so if someone clicked anywhere in any of the child elements, the handler responsible for these events is this event delegation
+
+for the quiz, create the event delegation because you cant give the events to each individual elements
+
+
+I CHANGED THE SCRIPT NAMES TO GIVE THEM THE QUESTION TYPE AND ADDED THAT ATTRIUBTE TO THE JSON AS WELL
+
+-->
