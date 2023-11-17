@@ -32,12 +32,6 @@
                 "Answers" : ["To call the superclass constructor", "To refer to a variable", "To create a class", "To create a method"],
                 "Correct Answer": "To call the superclass constructor"
             },
-            // "Question5" :{
-            //     "QuestionType": "narrative",
-            //     "Question": "Lets say you are working on a Java program and you have a class and its constructor (an object of the class). You also have variables declared before the constructor which are used within the parameters of the constructor. What keyword do you use to initialize the variable to equal the parameter?",
-            //     "Answers" : ["that","this"],
-            //     "Correct Answer": "this"
-            // },
        }, 
         "QUIZ2" :{
             "QuizName" : "Web Dev",
