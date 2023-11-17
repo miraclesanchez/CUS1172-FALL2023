@@ -33,46 +33,42 @@ const model = {
                 "Explanation": "The superclass refers to the class from which a subclass inherits. To inherit from a class means you can use their methods or access thier fields. In order to access from a super class we use the 'super' keyword.",
             },
             "Question5" :{
-                "QuestionType": "multiple_choice",
-                "Question": "What would you use the keyword 'super' for in Java?",
-                "Answers" : ["To call the superclass constructor", "To refer to a variable", "To create a class", "To create a method"],
-                "Correct_Answer": "To call the superclass constructor"
+                "QuestionType": "narrative",
+                "Question": "Lets say you are working on a Java program and you have a class and its constructor (an object of the class). You also have variables declared before the constructor which are used within the parameters of the constructor. What keyword do you use to initialize the variable to equal the parameter?",
+                "Answers" : ["that","this"],
+                "Correct_Answer": "this"
             },
-            // "Question5" :{
-            //     "QuestionType": "narrative",
-            //     "Question": "Lets say you are working on a Java program and you have a class and its constructor (an object of the class). You also have variables declared before the constructor which are used within the parameters of the constructor. What keyword do you use to initialize the variable to equal the parameter?",
-            //     "Answers" : ["that","this"],
-            //     "Correct_Answer": "this"
-            // },
        }, 
         "QUIZ2" :{
             "QuizName" : "Web Dev",
             "Question1" :{
-                "Question Type" : "multiple choice",
-                "Question": "What is 2+3",
-                "Answers" : [2,4,5,6],
-                "Correct_Answer": "4"
+                "QuestionType" : "multiple_choice",
+                "Question": "What does HTML stand for?",
+                "Answers" : ["Hyper Tom Met Lug","Ha toy mot lo","WebDev is fun","Hypertext Markup Language"],
+                "Correct_Answer": "Hypertext Markup Language",
+                "Explanation": "HTML describes the structure of a web page and stands for Hypertext Markup Language"
             },
             "Question2" :{
-                "Question Type" : "multiple choice",
-                "Question": "What is 2+3",
-                "Answers" : [2,4,5,6],
-                "Correct_Answer": "4"
+                "QuestionType" : "multiple_choice",
+                "Question": "What does the following picture output?",
+                "picture": "webDevPic.png",
+                "Answers" : [71,45,80,81],
+                "Correct_Answer": "81"
             },
             "Question3" :{
-                "Question Type" : "multiple choice",
-                "Question": "What is 2+2",
-                "Answers" : [2,4,5,6],
-                "Correct_Answer": "4"
+                "QuestionType" : "picture",
+                "Question": "Which picture correctly links a javascript file and css file to the html file?",
+                "Answers" : ["html_incorrect.png", "html_correct.png"],
+                "Correct_Answer": "html_correct.png"
             },
             "Question4" :{
-                "Question Type" : "multiple choice",
+                "QuestionType" : "multiple_choice",
                 "Question": "What is 2+2",
                 "Answers" : [2,4,5,6],
                 "Correct_Answer": "4"
             },
             "Question5" :{
-                "Question Type" : "multiple choice",
+                "QuestionType" : "multiple_choice",
                 "Question": "What is 2+2",
                 "Answers" : [2,4,5,6],
                 "Correct_Answer": "4"
@@ -82,6 +78,7 @@ const model = {
   }
 
 const appState = {
+    Fname: "",
     currentQuiz: "",
     currentQuestionIndex: 0,
     questions_correct : 0,
@@ -101,12 +98,13 @@ document.addEventListener('DOMContentLoaded',function(){
         document.querySelector('#form').onsubmit=function(){
 
         appState.currentQuestionIndex =1;
-        let Fname = document.querySelector('#Fname').value;
+        appState.Fname = document.querySelector('#Fname').value;
         document.querySelector('#label').innerHTML= `Welcome, ${Fname}! Good luck!`
         document.querySelector('#Fname').value='';
         document.querySelector('#Lname').value='';
 
         if(document.querySelector('#quiz_select').value === 'Quiz1'){
+            console.log(appState.Fname);
             appState.currentQuiz = "QUIZ1";
             console.log(appState.currentQuiz);
             appState.totalQuestions = Object.keys(model.results.QUIZ1).filter(key => key.startsWith('Question')).length;
@@ -123,17 +121,17 @@ document.addEventListener('DOMContentLoaded',function(){
             }
 
         }else if(document.querySelector('#quiz_select').value === 'Quiz2'){
+            console.log(appState.Fname);
             appState.currentQuiz = "QUIZ2";
             console.log(appState.currentQuiz);
-            appState.totalQuestions = Object.keys(model.results.QUIZ2).filter(key => key.startsWith('Question')).length;
+            appState.totalQuestions = Object.keys(model.results.QUIZ1).filter(key => key.startsWith('Question')).length;
             console.log(appState.totalQuestions);
             appState.question_type = model.results[appState.currentQuiz][`Question${appState.currentQuestionIndex}`].QuestionType;
-            console.log(appState.question_type);
-            let qurstion = create_question(appState.currentQuestionIndex);
-            console.log(qurstion);
+            create_question(appState.currentQuestionIndex);
 
             if(appState.question_type === 'multiple_choice'){
                 render_view(model, "#multiple_choice")
+                console.log("view rendered");
             }else if(appState.question_type === 'picture'){
                 render_view(model, "#picture")
             }else if(appState.question_type === 'narrative'){
@@ -146,13 +144,22 @@ document.addEventListener('DOMContentLoaded',function(){
         
         document.querySelector('#quiz_widget').onclick = (event) => {
             handle_answer(event);
-        };
+        }
+        
 
         return false; //prevents the DOM from reloading
     };
 
     
 });
+
+// const create_model = async () =>{
+//         const data = await fetch (`https://my-json-server.typicode.com/miraclesanchez/CUS1172-FALL2023`);
+//         const file = await data.json()
+//         model = file;
+//         console.log(model);
+// }
+
 
 
 const render_view =(model,view)=>{
@@ -166,11 +173,6 @@ const render_view =(model,view)=>{
 }
 
 const handle_answer = (event) =>{
-    
-    if(appState.currentQuestion.QuestionType === "narrative"){
-        handle_narrative(event);
-    }else{
-
     const radioButtons = document.querySelectorAll('input[name = "q2"]');
     radioButtons.forEach((radioButton) =>{
     radioButton.addEventListener('change', (event) => {
@@ -179,7 +181,15 @@ const handle_answer = (event) =>{
     });
     });
 
-    if(event.target.dataset.answer == "submit"){
+    const buttons = document.querySelectorAll('button[name = "button"]');
+    buttons.forEach((buttons) =>{
+    buttons.addEventListener('click', (event) => {
+    appState.userAnswer = event.target.value;
+    console.log(appState.userAnswer);
+    });
+    });
+
+    if(event.target.dataset.answer == "submit" ||event.target.dataset.but==="1" || event.target.dataset.but==='2'){
         appState.questions_answered +=1;
         console.log(appState.questions_answered);
         appState.currentQuestion = model.results[appState.currentQuiz][`Question${appState.currentQuestionIndex}`];
@@ -223,6 +233,13 @@ const handle_answer = (event) =>{
                         appState.final_grade = appState.questions_correct +"/" + appState.totalQuestions;
                         console.log(appState.final_grade);
                         render_view(model, "#final_results");
+                        document.querySelector('#Back').onclick =(event) =>{
+                            if(event.target.dataset.back === "Retry"){
+                                render_view(model, );
+                            }else if(event.target.dataset.back === "Back"){
+                                render_view(model, "#initial");
+                            }
+                        }
                         console.log("done")
                     }
                 }
@@ -231,7 +248,7 @@ const handle_answer = (event) =>{
             
         
     }
-}
+
 }
 
 const create_question = (index) => {
@@ -243,6 +260,7 @@ const create_question = (index) => {
     }else if(appState.currentQuestion.QuestionType === 'picture'){
         render_view(model, "#picture")
     }else if(appState.currentQuestion.QuestionType === 'narrative'){
+        handle_narrative();
         render_view(model, "#narrative")
         console.log("woop");
     }
@@ -277,37 +295,8 @@ const handle_narrative = (event) =>{
     });
     });
 }
-//     if(event.target.dataset.but == "1" ||event.target.dataset.but == "2" ){
-//         appState.questions_answered +=1;
-//         console.log(appState.questions_answered);
-//         appState.currentQuestion = model.results[appState.currentQuiz][`Question${appState.currentQuestionIndex}`];
-//         console.log(appState.userAnswer);
 
-//         const correctAnswer = appState.currentQuestion [`Correct_Answer`];
-//             console.log('correct: ' + correctAnswer);
-//             const type = appState.currentQuestion [`Question Type`];
 
-//             if(appState.userAnswer === correctAnswer){
-//                 appState.questions_correct +=1;
-//                 console.log('Questions Correct: '+appState.questions_correct);
 
-//                 displayGoodMessage();
 
-//                 setTimeout(()=> {
-//                                 if(appState.currentQuestionIndex < appState.totalQuestions) {
-//                                 appState.currentQuestionIndex +=1;
-//                                 console.log(appState.currentQuestionIndex);
-//                                 create_question(appState.currentQuestionIndex); 
-//                                 }
-//                             }, 1300);
-                        
-//             }else if(appState.userAnswer != correctAnswer){
-//                 appState.questions_wrong +=1;
-//                 console.log('Questions Incorrect: '+appState.questions_wrong);
-//                 displayBadMessage();
 
-//             }
-            
-        
-//     }
-// }
