@@ -53,7 +53,12 @@
             <div class="col">
                 <div id="questions">
                     <h1>{{currentQuiz}}</h1>
+
+                    <h2 id="label">Welcome, {{Fname}}! Good Luck!!</h2>
+
                     <h3 id="question_num"> Question: {{currentQuestion.Question}}</h3>
+                    <label><img src="{{currentQuestion.picture}}" alt=""></label><br><br>
+                    
                     <label for=""><input type="radio"  value="{{currentQuestion.Answers.[0]}}" name="q2">{{currentQuestion.Answers.[0]}}</label><br>
                     <label for=""><input type="radio"  value="{{currentQuestion.Answers.[1]}}" name="q2">{{currentQuestion.Answers.[1]}}</label><br>
                     <label for=""><input type="radio"  value="{{currentQuestion.Answers.[2]}}" name="q2">{{currentQuestion.Answers.[2]}}</label><br>
@@ -76,15 +81,18 @@
 
 <script id="picture" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
+
+    <h2 id="label">Welcome, {{Fname}}! Good Luck!!</h2>
+
     <h3 id="question_num"> Question: {{currentQuestion.Question}}</h3>
 
     <label >
-        <img src="{{currentQuestion.Answers.[0]}}" alt=""><br><br>
+        <img src="{{currentQuestion.Answers.[0]}}"><br><br>
         <input type="radio" value="{{currentQuestion.Answers.[0]}}" name="q2">
     </label>
 
     <label >
-        <img src="{{currentQuestion.Answers.[1]}}" alt=""><br><br>
+        <img src="{{currentQuestion.Answers.[1]}}"><br><br>
         <input type="radio" value="{{currentQuestion.Answers.[1]}}" name="q2">
     </label>
 
@@ -103,6 +111,9 @@
 
 <script id="narrative" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
+
+    <h2 id="label">Welcome, {{Fname}}! Good Luck!!</h2>
+
     <h3 id="question_num"> Question: {{currentQuestion.Question}}</h3>
 
     <button value="{{currentQuestion.Answers.[0]}}" data-but="1" name="button">{{currentQuestion.Answers.[0]}}</button>
@@ -120,12 +131,17 @@
 
 <script id= "good_feedback" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
+
+    <h2 id="label">Welcome, {{Fname}}! Good Luck!!</h2>
+
     <h3 class=".text-center">{{good_feedback}}</h3>
     
 </script>
 
 <script id="bad_feedback" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
+
+    <h2 id="label">Welcome, {{Fname}}! Good Luck!!</h2>
 
     <h2>Explanation: {{currentQuestion.Explanation}}</h2>
     <h2>Correct answer was: {{currentQuestion.Correct_Answer}}</h2>
@@ -136,6 +152,9 @@
 
 <script id="final_results" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
+
+    <h2 id="label">Welcome, {{Fname}}! Good Luck!!</h2>
+
     <h3>You have reached the end of the quiz!! Below are your stats: </h3>
     <h2>Questions Correct: {{questions_correct}}</h2>
     <h2>Questions Incorrect: {{questions_wrong}}</h2>
@@ -143,6 +162,12 @@
     <h2>{{final_message}}</h2>
     <h2>{{final_grade}}</h2>
 
+    <button id="Back" data-back="Back">Back</button><br><br>
+
+    <button id="Retry" data-back="Retry">Retry Same Quiz</button>
+
 
 </script>
 </html>
+
+<!-- MAKE PICTURES SMALLER -->
