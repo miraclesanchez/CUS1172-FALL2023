@@ -1,16 +1,76 @@
-{
-  "quiz": [
+"results": 
     {
-      "id": "multiple choice",
-      "Question": ["What is 2+2?", "What is 2+3", ]
-      "Answers": [4,5,23,90]
+        "QUIZ1" : {
+            "QuizName" : "Java",
+            "Question1" :{
+                "QuestionType": "multiple_choice",
+                "Question": "What type of programming language is Java?",
+                "Answers" : ["Imperative","Functional","Logical","Object-Oriented"],
+                "Correct Answer": "Object-Oriented"
+            },
+            "Question2" :{
+                "QuestionType": "picture",
+                "Question": "Which image shows the correct way to code the main method used in Java?",
+                "Answers" : ["img/java_correct.png", "img/java_wrong.png"],
+                "Correct Answer": "img/java_correct.png"
+            },
+            "Question3" :{
+                "QuestionType": "multiple_choice",
+                "Question": "Which is the correct way to declare a constant variable in Java?",
+                "Answers" : ["constant int num =4;","var int num =4;", "let int num =4;", "final int num =4;"],
+                "Correct Answer": "final int num =4;"
+            },
+            "Question4" :{
+                "QuestionType": "multiple_choice",
+                "Question": "What would you use the keyword 'super' for in Java?",
+                "Answers" : ["To call the superclass constructor", "To refer to a variable", "To create a class", "To create a method"],
+                "Correct Answer": "To call the superclass constructor"
+            },
+            "Question5" :{
+                "QuestionType": "multiple_choice",
+                "Question": "What would you use the keyword 'super' for in Java?",
+                "Answers" : ["To call the superclass constructor", "To refer to a variable", "To create a class", "To create a method"],
+                "Correct Answer": "To call the superclass constructor"
+            },
+            // "Question5" :{
+            //     "QuestionType": "narrative",
+            //     "Question": "Lets say you are working on a Java program and you have a class and its constructor (an object of the class). You also have variables declared before the constructor which are used within the parameters of the constructor. What keyword do you use to initialize the variable to equal the parameter?",
+            //     "Answers" : ["that","this"],
+            //     "Correct Answer": "this"
+            // },
+       }, 
+        "QUIZ2" :{
+            "QuizName" : "Web Dev",
+            "Question1" :{
+                "Question Type" : "multiple choice",
+                "Question": "What is 2+3",
+                "Answers" : [2,4,5,6],
+                "Correct Answer": "4"
+            },
+            "Question2" :{
+                "Question Type" : "multiple choice",
+                "Question": "What is 2+3",
+                "Answers" : [2,4,5,6],
+                "Correct Answer": "4"
+            },
+            "Question3" :{
+                "Question Type" : "multiple choice",
+                "Question": "What is 2+2",
+                "Answers" : [2,4,5,6],
+                "Correct Answer": "4"
+            },
+            "Question4" :{
+                "Question Type" : "multiple choice",
+                "Question": "What is 2+2",
+                "Answers" : [2,4,5,6],
+                "Correct Answer": "4"
+            },
+            "Question5" :{
+                "Question Type" : "multiple choice",
+                "Question": "What is 2+2",
+                "Answers" : [2,4,5,6],
+                "Correct Answer": "4"
+            }
+       }  
     }
-    {
-      "id": "true or false",
-      "Question": "3*3 = 10"
-    }
-  ],
-  "profile": {
-    "name": "hello"
   }
-}
