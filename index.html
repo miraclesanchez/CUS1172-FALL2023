@@ -10,7 +10,12 @@
 
 </head>
 <body>
+  <div id="quiz_widget">
 
+     </div>
+</body>
+
+<script id="initial" type="text/x-handlebars-template">
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-6 mx-auto">
@@ -33,17 +38,16 @@
 
                     <input type="submit">
                 </form>
-
-                <div id="quiz_widget">
-
-                </div>
             </div>
         </div>
     </div>
-</body>
+
+</script>
+
 
 
 <script id= "multiple_choice" type="text/x-handlebars-template">
+    
    <div class="container">
         <div class="row">
             <div class="col">
@@ -123,17 +127,22 @@
 <script id="bad_feedback" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
 
-    <button id="got_it"></button>
+    <h2>Explanation: {{currentQuestion.Explanation}}</h2>
+    <h2>Correct answer was: {{currentQuestion.Correct_Answer}}</h2>
+    <button id="got_it">Got it!</button>
 </script>
 
 
 
 <script id="final_results" type="text/x-handlebars-template">
     <h1>{{currentQuiz}}</h1>
+    <h3>You have reached the end of the quiz!! Below are your stats: </h3>
+    <h2>Questions Correct: {{questions_correct}}</h2>
+    <h2>Questions Incorrect: {{questions_wrong}}</h2>
 
+    <h2>{{final_message}}</h2>
     <h2>{{final_grade}}</h2>
+
 
 </script>
 </html>
-
-
