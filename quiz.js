@@ -12,8 +12,8 @@ const model = {
             "Question2" :{
                 "QuestionType": "picture",
                 "Question": "Which image shows the correct way to code the main method used in Java?",
-                "Answers" : ["img/java_correct.png", "img/java_wrong.png"],
-                "Correct Answer": "img/java_correct.png"
+                "Answers" : ["java_correct.png", "java_wrong.png"],
+                "Correct Answer": "java_correct.png"
             },
             "Question3" :{
                 "QuestionType": "multiple_choice",
