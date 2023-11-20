@@ -63,15 +63,15 @@ const model = {
             },
             "Question4" :{
                 "QuestionType" : "multiple_choice",
-                "Question": "What is 2+2",
-                "Answers" : [2,4,5,6],
-                "Correct_Answer": "4"
+                "Question": "What is the purpose of the 'querySelector' method in JavaScript",
+                "Answers" : ["To select and modify HTML elements based on their class names","To create a class","To select and modify HTML elements based on their IDs","To query a server"],
+                "Correct_Answer": "To select and modify HTML elements based on their IDs"
             },
             "Question5" :{
                 "QuestionType" : "multiple_choice",
-                "Question": "What is 2+2",
-                "Answers" : [2,4,5,6],
-                "Correct_Answer": "4"
+                "Question": "What do the following selectors mean in CSS? '.' , '#' , 'p'",
+                "Answers" : ["class, ID, element","paragraph, class, html","period, hashtag, paragraph","semicolon, java, class"],
+                "Correct_Answer": "class, ID, element"
             }
        }  
     }
