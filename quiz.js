@@ -53,25 +53,29 @@ const model = {
                 "Question": "What does the following picture output?",
                 "picture": "webDevPic.png",
                 "Answers" : [71,45,80,81],
-                "Correct_Answer": "81"
+                "Correct_Answer": "81",
+                "Explanation": "The first variable 'y' is a function that takes in 'f' (a fuction) and 'xx' which can be a number. The second variable 'z' outputs the function 'y' with two parameters. The first being the function 'a=>a*a' and 3. You take that and plug it into 'y'. So now 'y' = (a=>a*a,3). According to the definition of 'y', you take the function and plug 'xx' for it, which in our case is 3. So essentially after pluggin everything in, for the inner parenthesis you get (f(xx)) = (f(3)) = 9. Then for the outter function it is f(9) which is 81 because 9*9=81.",
             },
             "Question3" :{
                 "QuestionType" : "picture",
                 "Question": "Which picture correctly links a javascript file and css file to the html file?",
                 "Answers" : ["html_incorrect.png", "html_correct.png"],
-                "Correct_Answer": "html_correct.png"
+                "Correct_Answer": "html_correct.png",
+                "Explanation": "For a css file you use a link tag and for javascript you must use a script tag.",
             },
             "Question4" :{
                 "QuestionType" : "multiple_choice",
                 "Question": "What is the purpose of the 'querySelector' method in JavaScript",
                 "Answers" : ["To select and modify HTML elements based on their class names","To create a class","To select and modify HTML elements based on their IDs","To query a server"],
-                "Correct_Answer": "To select and modify HTML elements based on their IDs"
+                "Correct_Answer": "To select and modify HTML elements based on their IDs",
+                "Explanation": "When using this you would input an element using its ID and be able to retrieve the information within the element or alter the informaiton.",
             },
             "Question5" :{
                 "QuestionType" : "multiple_choice",
                 "Question": "What do the following selectors mean in CSS? '.' , '#' , 'p'",
                 "Answers" : ["class, ID, element","paragraph, class, html","period, hashtag, paragraph","semicolon, java, class"],
-                "Correct_Answer": "class, ID, element"
+                "Correct_Answer": "class, ID, element",
+                "Explanation" : " '.' is used for a class element. (class = container would become '.container' in css. '#' is used for IDs. 'id=glass' becomes '#glass'. 'p' is an element selector referering to the paragraphs within your html."
             }
        }  
     }
