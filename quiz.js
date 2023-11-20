@@ -234,14 +234,20 @@ const handle_answer = (event) =>{
                         console.log(appState.final_grade);
                         render_view(model, "#final_results");
                         document.querySelector('#Back').onclick =(event) =>{
-                            if(event.target.dataset.back === "Retry"){
-                                render_view(model, );
-                            }else if(event.target.dataset.back === "Back"){
+                            if(event.target.dataset.back === "Back"){
                                 render_view(model, "#initial");
                             }
                         }
+                        document.querySelector('#Retry').onclick = (event)=>{
+                            if(event.target.dataset.retry === "Retry"){
+                                    appState.currentQuestionIndex = 1;
+                                    console.log("retry activated. CQI ="+appState.currentQuestionIndex);
+                                    create_question(appState.currentQuestionIndex)
+                            }
+                        
+                        }
                         console.log("done")
-                    }
+                }
                 }
 
             } 
